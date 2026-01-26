@@ -1,0 +1,28 @@
+{
+  "require-dev": {
+    "phpstan/phpstan": "^2.1",
+    "nette/php-generator": "^4.2",
+    "mperusso/php-stubs-generator": "dev-master"
+  },
+
+  "repositories": [
+    {
+      "type": "vcs",
+      "url": "https://github.com/mperusso/php-stubs-generator"
+    }
+  ],
+
+  "autoload": {
+    "psr-4": {
+      "App\\": "src/"
+    }
+  },
+  "require": {
+    "symfony/console": "*"
+  },
+  "bin": [
+    "bin/console"
+  ],
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
