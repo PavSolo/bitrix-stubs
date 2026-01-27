@@ -19,6 +19,7 @@ class GenerateStubsCommand extends Command
     protected function configure(): void
     {
         $this
+            ->setName('stubs:generate')
             ->addArgument('root', InputArgument::REQUIRED, 'Path to the Bitrix project root')
             ->addOption('module', 'm', InputOption::VALUE_REQUIRED | InputOption::VALUE_IS_ARRAY, 'Bitrix module(s) to include (e.g. main, sale)', []);
     }
