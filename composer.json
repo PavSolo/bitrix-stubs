@@ -1,14 +1,13 @@
 {
   "name": "pavsolo/bitrix-stubs",
   "require-dev": {
-    "phpstan/phpstan": "^2.1",
-    "nette/php-generator": "^4.2"
+    "phpstan/phpstan": "^2.1"
   },
 
   "repositories": [
     {
       "type": "vcs",
-      "url": "https://github.com/mperusso/php-stubs-generator"
+      "url": "https://github.com/PavSolo/generator"
     }
   ],
 
@@ -19,7 +18,7 @@
   },
   "require": {
     "symfony/console": "^4.4 || ^5.1 || ^6.0 || ^7.0",
-    "mperusso/php-stubs-generator": "dev-master"
+    "PavSolo/generator": "dev-master"
   },
   "bin": [
     "bin/console"
