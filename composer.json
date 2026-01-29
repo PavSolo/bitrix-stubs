@@ -18,7 +18,7 @@
   },
   "require": {
     "symfony/console": "^4.4 || ^5.1 || ^6.0 || ^7.0",
-    "PavSolo/generator": "dev-master"
+    "pavsolo/generator": "dev-master"
   },
   "bin": [
     "bin/console"
