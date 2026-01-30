@@ -4,7 +4,6 @@ namespace App\Command;
 
 use StubsGenerator\{StubsGenerator, Finder};
 use Symfony\Component\Console\Attribute\AsCommand;
-use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
@@ -50,7 +49,7 @@ class GenerateStubsCommand extends Command
 
         if (empty($modulePaths)) {
             $output->writeln('<error>No valid module directories found.</error>');
-            return Command::FAILURE;
+            return 1;
         }
 
         $finder = Finder::create()->in($modulePaths);
@@ -93,6 +92,6 @@ class GenerateStubsCommand extends Command
         file_put_contents($outputFile, $result->prettyPrint());
 
         $output->writeln("<info>✅ Stubs generated successfully:</info> <comment>{$outputFile}</comment>");
-        return Command::SUCCESS;
+        return 0;
     }
 }
